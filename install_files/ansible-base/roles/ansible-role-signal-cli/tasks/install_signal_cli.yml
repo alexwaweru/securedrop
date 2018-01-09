@@ -1,0 +1,20 @@
+---
+- block:
+  - name: Install securedrop-signal-cli package.
+    apt:
+      name: securedrop-signal-cli
+      state: present
+    when: not install_local_packages
+    notify: restart apparmor
+    tags:
+      - apt
+
+  - name: Convert jvm header for pax
+    shell: "paxctl -c /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/java"
+    become: yes
+
+  - name: Set jvm pax flag
+    shell: "paxctl -m /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/java"
+    become: yes
+
+  become: True
