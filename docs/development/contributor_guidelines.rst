@@ -143,6 +143,9 @@ committed to do so in a transparent way as follows:
     * explains what is expected from the contributor before they can be granted the privilege
 * Step 3: the thread is closed
 
+The privileges of a developer who has not been active for a year or
+more are revoked. They can apply again at any time.
+
 Other Tips
 ----------
 
